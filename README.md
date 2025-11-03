@@ -1,215 +1,154 @@
-# neurogent.ai - Presentation
+# Neurogent.ai Website
 
-A stunning, professional HTML presentation for showcasing custom AI solutions to potential clients.
+A modern, conversion-focused website for Neurogent.ai - Production-Grade AI Agent Development Company.
 
 ## 🚀 Features
 
-- **Modern Design**: Beautiful gradients, animations, and professional styling
-- **Smooth Transitions**: Seamless slide transitions with elegant animations
-- **Interactive Navigation**: Multiple ways to navigate through slides
-- **Responsive Design**: Works perfectly on all screen sizes
-- **Keyboard Shortcuts**: Full keyboard navigation support
-- **Touch Support**: Swipe gestures for mobile devices
-- **Professional Metrics**: Eye-catching impact metrics and case studies
-- **Accessibility**: ARIA labels and accessibility features
+- **Modern Design**: Inspired by leading AI agent platforms (Lyzr, Haptik, 1000xdev)
+- **Dark/Light Mode**: Beautiful theme toggle with localStorage persistence (defaults to light mode)
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Conversion-Focused**: Strategic CTAs throughout to drive meeting bookings
+- **Smooth Animations**: Fade-in effects, hover states, and parallax scrolling
+- **Fast Loading**: Lightweight vanilla JavaScript, no framework overhead
+- **SEO Optimized**: Semantic HTML with proper meta tags
 
-## 📁 Files Structure
+## 📋 Sections
 
+1. **Hero Section**: Bold headline with key value proposition and CTAs
+2. **What We Do**: Core services and differentiators
+3. **Use Cases**: Practical applications of AI agents
+4. **Who We Build For**: Target industries and ideal customer profiles
+5. **How It Works**: 4-step process timeline
+6. **Why Neurogent.ai**: Key strengths and technology stack
+7. **Contact Section**: Final conversion push with prominent CTA
+8. **Footer**: Company information and legal details
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: Purple gradient (#8B5CF6 to #6366F1)
+- **Dark**: #0F172A
+- **Gray**: #64748B
+- **Light**: #F8FAFC
+- **White**: #FFFFFF
+
+### Typography
+- **Font**: Inter (Google Fonts)
+- **Headings**: 800 weight for maximum impact
+- **Body**: 400-600 weight for readability
+
+### Components
+- Dark/Light mode toggle (navbar + mobile menu)
+- Gradient buttons with hover effects
+- Floating animation cards
+- Interactive process timeline
+- Feature cards with hover states
+- Mobile-responsive navigation
+
+## 🛠️ Technical Stack
+
+- **HTML5**: Semantic markup
+- **CSS3**: Custom properties, Grid, Flexbox, animations
+- **Vanilla JavaScript**: No dependencies, fast loading
+- **Google Fonts**: Inter font family
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: 1024px and above
+- **Tablet**: 768px - 1023px
+- **Mobile**: Below 768px
+
+## 🚀 Getting Started
+
+1. Open `index.html` in your web browser
+2. No build process required - works out of the box!
+
+### For Development
+
+You can use any local server. For example:
+
+```bash
+# Python
+python -m http.server 8000
+
+# Node.js (npx)
+npx serve
+
+# VS Code Live Server extension
 ```
-presentation/
-├── index.html          # Main presentation file
-├── styles.css          # All styling and animations
-├── script.js           # Interactive functionality
-└── README.md          # This file
+
+Then navigate to `http://localhost:8000`
+
+## 📊 CTA Integration
+
+All "Book a Consultation" buttons link to:
+```
+https://calendar.app.google/LLxhMUzRgQjrriQQ6
 ```
 
-## 🎯 How to Use
+Email contact: `hello@neurogent.ai`
 
-### Basic Usage
-1. Open `index.html` in any modern web browser
-2. Use navigation controls or keyboard shortcuts to navigate
+## 🎯 Conversion Optimization
 
-### Navigation Options
-- **Arrow Keys**: ← → to navigate slides
-- **Space/Enter**: Next slide
-- **Backspace**: Previous slide
-- **Number Keys**: Press 1-9 to jump directly to slides
-- **Mouse/Touch**: Click navigation dots or use swipe gestures
-- **Escape**: Toggle fullscreen mode
+- **Multiple CTAs**: Hero, each section, and dedicated contact section
+- **Clear Value Propositions**: Technical expertise + business outcomes
+- **Trust Indicators**: Technology badges, process transparency
+- **Mobile-First**: Optimized for mobile conversion
+- **Fast Loading**: Minimal dependencies for instant page load
 
-### Navigation Controls
-- **Dots**: Click any dot to jump to that slide
-- **Arrow Buttons**: Previous/Next buttons in the top-right
-- **Progress Bar**: Shows presentation progress at the top
+## 📝 Customization
 
-## 🎨 Customization Guide
+### Changing Colors
 
-### Contact Information
-Update the contact details in **Slide 15** (`index.html` line ~800+):
-```html
-<div class="contact-item">
-    <i class="fas fa-envelope"></i>
-    <span>YOUR_EMAIL@neurogent.ai</span>
-</div>
-```
+Edit CSS variables in `styles.css`:
 
-### Company Branding
-- **Logo**: Update the brain icon in the `.logo` sections
-- **Colors**: Modify CSS variables in `styles.css` (lines 15-35)
-- **Fonts**: Change the Google Fonts import in `index.html`
-
-### Content Updates
-- **Case Studies**: Update metrics and descriptions in slides 7-10
-- **Technology Stack**: Modify tech items in slide 12
-- **Company Details**: Update differentiators in slide 4
-
-### Color Scheme
-The presentation uses a modern blue-purple gradient theme. Key colors in `styles.css`:
 ```css
---primary-blue: #2563eb;
---primary-purple: #7c3aed;
---accent-cyan: #06b6d4;
---accent-emerald: #10b981;
+:root {
+    --primary: #8B5CF6;
+    --secondary: #6366F1;
+    /* ... more variables */
+}
 ```
 
-## 📊 Slide Breakdown
+### Updating Content
 
-1. **Title Slide**: Company introduction with animated logo
-2. **The Problem**: Four key business challenges with icons
-3. **The Solution**: High-level approach with three pillars
-4. **Why neurogent.ai?**: Four key differentiators
-5. **Core Capabilities**: Detailed service offerings
-6. **Our Work**: Transition to case studies
-7. **Healthcare Claims**: Case study with metrics
-8. **Loan Advisor**: AI-powered financial solution
-9. **Voice AI**: Driver onboarding automation
-10. **Insurance**: Real-time eligibility verification
-11. **Proven Impact**: Summary metrics table
-12. **Technology Stack**: Technical capabilities
-13. **Engagement Process**: Three-step process
-14. **Call to Action**: Next steps for prospects
-15. **Contact**: Thank you and contact information
+Edit text directly in `index.html` - all content is clearly structured and commented.
 
-## 🎭 Animations & Effects
+### Adding Analytics
 
-The presentation includes:
-- **Slide Transitions**: Smooth left/right sliding
-- **Element Animations**: Staggered fade-ins and slide-ups
-- **Hover Effects**: Interactive elements on hover
-- **Loading Animations**: Progressive content loading
-- **Responsive Animations**: Optimized for different screen sizes
+Add your analytics code in `script.js` where CTA tracking is set up:
 
-## 📱 Mobile Optimization
+```javascript
+ctaButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Add your analytics tracking here
+    });
+});
+```
 
-- **Touch Navigation**: Swipe left/right to navigate
-- **Responsive Layout**: Adapts to mobile screens
-- **Readable Typography**: Optimized font sizes
-- **Touch-Friendly Controls**: Large navigation elements
+## 🔧 Browser Support
 
-## 🔧 Technical Features
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-### Performance
-- **Lazy Loading**: Images load as needed
-- **Smooth Animations**: Hardware-accelerated transitions
-- **Optimized CSS**: Efficient styling and animations
-- **Fast Loading**: Minimal external dependencies
+## 📄 License
 
-### Accessibility
-- **ARIA Labels**: Screen reader support
-- **Keyboard Navigation**: Full keyboard accessibility
-- **High Contrast**: Clear color contrasts
-- **Reduced Motion**: Respects user preferences
+© 2025 Neurogent Intelligence LLP. All rights reserved.
 
-### Browser Support
-- **Modern Browsers**: Chrome, Firefox, Safari, Edge
-- **Mobile Browsers**: iOS Safari, Chrome Mobile
-- **Fallbacks**: Graceful degradation for older browsers
+## 📞 Contact
 
-## 🎯 Presentation Tips
+**Neurogent Intelligence LLP**  
+303, Maa Bhagwati, RK Enclave  
+Laxman Vihar, Sector 5  
+Gurgaon, 122001  
+CIN: ACP-6309  
 
-### For Live Presentations
-1. Use **Escape** to enter fullscreen mode
-2. Practice with keyboard navigation
-3. Test all interactive elements beforehand
-4. Have a backup plan for technical issues
-
-### For Client Meetings
-1. Customize contact information
-2. Update case study metrics
-3. Prepare speaker notes for each slide
-4. Test on the presentation device
-
-### For Remote Presentations
-1. Share your screen in presentation mode
-2. Use a wireless presenter remote
-3. Ensure stable internet connection
-4. Have slides exported as PDF backup
-
-## 🚀 Deployment Options
-
-### Simple Hosting
-- Upload files to any web server
-- Works with GitHub Pages, Netlify, Vercel
-- No server-side requirements
-
-### Local Presentation
-- Open `index.html` directly in browser
-- No internet connection required
-- All assets are self-contained
-
-### Integration
-- Embed in existing websites
-- Customize styling to match brand
-- Add analytics tracking if needed
-
-## 🎨 Design Philosophy
-
-The presentation follows modern design principles:
-- **Clean Typography**: Inter font for readability
-- **Consistent Spacing**: Systematic spacing scale
-- **Professional Colors**: Blue-purple gradient theme
-- **Subtle Animations**: Enhance without distracting
-- **Clear Hierarchy**: Guided visual flow
-
-## 📈 Metrics & KPIs Highlighted
-
-The presentation showcases impressive results:
-- **Revenue Growth**: Up to +15%
-- **Processing Speed**: Up to 70% faster
-- **Cost Reduction**: Down to -50%
-- **Scale**: 100,000+ profiles processed
-- **Accuracy**: >95% groundedness
-- **Efficiency**: 30-40% lower denial rates
-
-## 🤝 Customization Support
-
-### Easy Updates
-- Contact information
-- Company metrics
-- Case study details
-- Technology stack
-- Color scheme
-
-### Advanced Customization
-- Custom animations
-- Additional slides
-- Integration with CRM
-- Analytics tracking
-- Custom branding
-
-## 📞 Next Steps
-
-1. **Review Content**: Verify all information is accurate
-2. **Update Contact Info**: Add your specific details
-3. **Practice Presentation**: Get familiar with navigation
-4. **Customize Branding**: Match your company style
-5. **Test on Target Device**: Ensure everything works smoothly
+Email: hello@neurogent.ai  
+Website: [Book a Call](https://calendar.app.google/LLxhMUzRgQjrriQQ6)
 
 ---
 
-**Ready to impress your clients?** 🎯
-
-This presentation is designed to showcase neurogent.ai's capabilities in the most professional and engaging way possible. The combination of beautiful design, smooth interactions, and compelling content will definitely give your potential clients that "wow feeling" you're looking for!
-
-For any questions or customization needs, feel free to ask! 🚀
-# Updated: Sun Aug 24 23:53:18 IST 2025
+Built with ❤️ for AI Agent Innovation

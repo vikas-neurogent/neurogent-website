@@ -3,721 +3,883 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="neurogent.ai - Transform your business with custom AI solutions. Guaranteed 10x ROI in 90 days. Specializing in AI automation, conversational AI, and intelligent workflows.">
-    <meta name="keywords" content="AI solutions, automation, business transformation, ROI, AI consulting">
-    <meta name="theme-color" content="#0a0a0f">
-    <title>neurogent.ai - Custom AI Solutions for Business Transformation</title>
+    <title>neurogent.ai - Production-Grade AI Agents | LangChain, Autogen, Bedrock & Vertex AI</title>
+    <meta name="description" content="We design and deploy secure, compliant AI agents that integrate with your systems and deliver measurable ROI. Expert AI agent development on LangChain, Microsoft Autogen, AWS Bedrock, Google Vertex AI.">
+    <meta name="keywords" content="AI agents, LangChain, Microsoft Autogen, AWS Bedrock, Google Vertex AI, AI development, production AI, enterprise AI, custom AI agents">
+    <meta name="author" content="Neurogent Intelligence LLP">
     
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neurogent.ai/">
+    <meta property="og:title" content="neurogent.ai - Production-Grade AI Agents">
+    <meta property="og:description" content="We design and deploy secure, compliant AI agents that integrate with your systems and deliver measurable ROI.">
+    <meta property="og:image" content="https://neurogent.ai/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://neurogent.ai/">
+    <meta property="twitter:title" content="neurogent.ai - Production-Grade AI Agents">
+    <meta property="twitter:description" content="We design and deploy secure, compliant AI agents that integrate with your systems and deliver measurable ROI.">
+    <meta property="twitter:image" content="https://neurogent.ai/og-image.png">
+    
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
     
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="logo.avif" alt="neurogent.ai Logo" class="nav-logo-image">
-                <span>neurogent.ai</span>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="logo.png" alt="neurogent.ai Logo" class="logo-image">
+                    <span class="logo-text">neurogent.ai</span>
+                </div>
+                <div class="nav-links">
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.5 4.5L14 6M6 14L4.5 15.5M15.5 15.5L14 14M6 6L4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 10.5C16.1 14.8 12.2 18 7.5 18C3.4 18 0 14.6 0 10.5C0 5.8 3.2 1.9 7.5 1C6.6 2.1 6 3.5 6 5C6 8.6 8.9 11.5 12.5 11.5C14 11.5 15.4 10.9 16.5 10C16.8 10.1 17 10.3 17 10.5Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="cta-button" target="_blank">
+                        <span class="cta-text-full">Book Free Consultation →</span>
+                        <span class="cta-text-mobile">Book Call →</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="mobile-nav-toggle" id="mobileNavToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" target="_blank" class="nav-link cta-nav">Book a Demo</a></li>
-            </ul>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="theme-toggle mobile" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.5 4.5L14 6M6 14L4.5 15.5M15.5 15.5L14 14M6 6L4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 10.5C16.1 14.8 12.2 18 7.5 18C3.4 18 0 14.6 0 10.5C0 5.8 3.2 1.9 7.5 1C6.6 2.1 6 3.5 6 5C6 8.6 8.9 11.5 12.5 11.5C14 11.5 15.4 10.9 16.5 10C16.8 10.1 17 10.3 17 10.5Z" fill="currentColor"/>
+            </svg>
+            <span class="theme-toggle-text">Dark Mode</span>
+        </button>
+        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="cta-button" target="_blank">Book Free Consultation →</a>
+    </div>
+
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Transform Your Business in 90 Days</h1>
-            <h2 class="hero-subtitle">Custom AI Solutions That Deliver 10x ROI</h2>
-            <div class="hero-decoration">
-                <div class="decorative-line"></div>
-                <div class="ai-icons">
-                    <i class="fas fa-robot"></i>
-                    <i class="fas fa-cogs"></i>
-                    <i class="fas fa-chart-line"></i>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Production-Grade AI Agent Development
+                </div> -->
+                <h1 class="hero-title">
+                    We build production-grade <span class="gradient-text">AI agents</span> on 
+                    <span class="gradient-text rotating-text"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    We design and deploy secure, compliant AI agents that integrate with your systems and deliver measurable ROI.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                        Book a Free AI Consultation Call
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    
                 </div>
-                <div class="decorative-line"></div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Production Ready</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">10x</div>
+                        <div class="stat-label">Faster Deployment</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">AI Operations</div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-cta">
-                <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" target="_blank" class="nav-link cta-nav">
-                    Book a Demo
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">🤖</div>
+                    <div class="card-text">LangChain</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-text">Microsoft Autogen</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">☁️</div>
+                    <div class="card-text">AWS Bedrock</div>
+                </div>
+                <div class="floating-card card-4">
+                    <div class="card-icon">🎯</div>
+                    <div class="card-text">Google Vertex AI</div>
+                </div>
+                <div class="hero-shape"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section - Engagement Models -->
+    <section id="what-we-do" class="section engagement-models">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Engagement Models <span class="gradient-text"></span></h2>
+                <p class="section-description">
+                    We help you build, scale, or outsource AI agent development the way your business needs, with models that match your speed, scale, and expertise.
+                </p>
+            </div>
+
+            <div class="engagement-grid">
+                <!-- Team Augmentation -->
+                <div class="engagement-card">
+                    <div class="engagement-header">
+                        <div class="engagement-icon">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="56" height="56" rx="12" fill="#6366F1"/>
+                                <path d="M28 20C30.2091 20 32 18.2091 32 16C32 13.7909 30.2091 12 28 12C25.7909 12 24 13.7909 24 16C24 18.2091 25.7909 20 28 20Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20 44V40C20 37.7909 21.7909 36 24 36H32C34.2091 36 36 37.7909 36 40V44" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M38 20C40.2091 20 42 18.2091 42 16C42 13.7909 40.2091 12 38 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M44 44V40C44 37.7909 42.2091 36 40 36H38" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 20C15.7909 20 14 18.2091 14 16C14 13.7909 15.7909 12 18 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 44V40C12 37.7909 13.7909 36 16 36H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="engagement-title">Team Augmentation</h3>
+                    </div>
+                    <div class="engagement-content">
+                        <p class="engagement-description">
+                            Scale faster by bringing in specialized AI engineers and developers who embed seamlessly into your workflows, accelerating builds without long hiring cycles.
+                        </p>
+                        <p class="engagement-ideal">
+                            <strong>Ideal for:</strong> Teams needing short-term AI talent or project-specific expertise.
+                        </p>
+                    </div>
+                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="engagement-link" target="_blank">
+                        Get a free consultation
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Dedicated AI Agent Development Teams -->
+                <div class="engagement-card">
+                    <div class="engagement-header">
+                        <div class="engagement-icon">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="56" height="56" rx="12" fill="#6366F1"/>
+                                <path d="M28 38C33.5228 38 38 33.5228 38 28C38 22.4772 33.5228 18 28 18C22.4772 18 18 22.4772 18 28C18 33.5228 22.4772 38 28 38Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M28 22V28L32 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M42 14L40 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 40L14 42" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M42 42L40 40" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 16L14 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="engagement-title">Dedicated AI Agent Development Teams</h3>
+                    </div>
+                    <div class="engagement-content">
+                        <p class="engagement-description">
+                            Get a fully managed team dedicated to your product, from LLM engineers to integrations specialists, operating as your extended arm to deliver production-grade agents.
+                        </p>
+                        <p class="engagement-ideal">
+                            <strong>Ideal for:</strong> Companies needing consistent, high-quality AI builds.
+                        </p>
+                    </div>
+                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="engagement-link" target="_blank">
+                        Get a free consultation
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Full AI Agent Development Outsourcing -->
+                <div class="engagement-card">
+                    <div class="engagement-header">
+                        <div class="engagement-icon">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="56" height="56" rx="12" fill="#6366F1"/>
+                                <path d="M28 12L14 20V28C14 35 20 40 28 44C36 40 42 35 42 28V20L28 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 28L26 32L34 24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="engagement-title">Full AI Agent Development Outsourcing</h3>
+                    </div>
+                    <div class="engagement-content">
+                        <p class="engagement-description">
+                            Delegate your entire AI lifecycle, from strategy to deployment. We take complete ownership, ensuring faster time to market and full accountability.
+                        </p>
+                        <p class="engagement-ideal">
+                            <strong>Ideal for:</strong> Enterprises or startups wanting an end-to-end AI partner.
+                        </p>
+                    </div>
+                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="engagement-link" target="_blank">
+                        Get a free consultation
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div class="section-cta">
+                <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                    Book a Free Consultation
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="section use-cases-lyzr">
+        <div class="container">
+            <!-- Category Tabs -->
+            <div class="use-case-tabs">
+                <button class="use-case-tab active" data-category="hr">HR</button>
+                <button class="use-case-tab" data-category="marketing">Marketing</button>
+                <button class="use-case-tab" data-category="sales">Sales</button>
+                <button class="use-case-tab" data-category="customer-service">Customer Service</button>
+                <button class="use-case-tab" data-category="banking">Banking</button>
+                <button class="use-case-tab" data-category="insurance">Insurance</button>
+            </div>
+
+            <!-- Content Layout -->
+            <div class="use-case-content">
+                <!-- Left Side: Title and Description -->
+                <div class="use-case-left">
+                    <h2 class="use-case-main-title">Get AI agents for real business impact</h2>
+                    <p class="use-case-main-description">Deploy AI agents that solve specific challenges, from automating workflows to improving decision-making. Each agent is designed to deliver measurable ROI across industries and business functions.</p>
+                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                        Talk to us
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Right Side: Agent Cards -->
+                <div class="use-case-right">
+                    <!-- HR Category -->
+                    <div class="use-case-agents active" data-category="hr" data-category-title="HR">
+                        <div class="agent-card agent-card-green">
+                            <h3>AI Hiring Assistant</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Exit Interview Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Job Description Generator</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>HR Helpdesk Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>AI L&D Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-green">
+                            <h3>Employee Satisfaction Survey Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AI Performance Review Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Resume Screening Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Onboarding Assistant Agent</h3>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Category -->
+                    <div class="use-case-agents" data-category="marketing" data-category-title="Marketing">
+                        <div class="agent-card agent-card-green">
+                            <h3>Blog Writer</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Email Marketer</h3>
+                        </div>
+                        <div class="agent-card agent-card-green">
+                            <h3>LinkedIn Marketer</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Twitter Posting Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>SEO Optimizer</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Lead Enrichment</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Marketing Strategy Builder</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Press Release Writer</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>AI Video Generator</h3>
+                        </div>
+                    </div>
+
+                    <!-- Sales Category -->
+                    <div class="use-case-agents" data-category="sales" data-category-title="Sales">
+                        <div class="agent-card agent-card-green">
+                            <h3>ICP Generator</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AI Dialer Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-green">
+                            <h3>AI SDR (inbound)</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>AI Phone Dialler</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>LinkedIn Outreach Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AI SMS Campaign Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AI WhatsApp Campaign Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>List Builder</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>AI Sales Coach</h3>
+                        </div>
+                    </div>
+
+                    <!-- Customer Service Category -->
+                    <div class="use-case-agents" data-category="customer-service" data-category-title="Customer Service">
+                        <div class="agent-card agent-card-green">
+                            <h3>AI Customer Support</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AI Phone Support</h3>
+                        </div>
+                        <div class="agent-card agent-card-green">
+                            <h3>Customer Onboarding Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Customer Support Chatbot</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>RCA Research Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Customer Sentiment Analysis</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>CSAT Surveys</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Customer Testimonial Collector</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Chatbot Integration Agent</h3>
+                        </div>
+                    </div>
+
+                    <!-- Banking Category -->
+                    <div class="use-case-agents" data-category="banking" data-category-title="Banking">
+                        <div class="agent-card agent-card-green">
+                            <h3>Teller Assistance</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AI Banking Customer Support</h3>
+                        </div>
+                        <div class="agent-card agent-card-green">
+                            <h3>Retirement Planning Assistant</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Regulatory Monitoring Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Refund Processing Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Fraud Detection Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AML Check</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>KYC Processing</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Cash Flow Prediction Agent</h3>
+                        </div>
+                    </div>
+
+                    <!-- Insurance Category -->
+                    <div class="use-case-agents" data-category="insurance" data-category-title="Insurance">
+                        <div class="agent-card agent-card-green">
+                            <h3>Claims Processing</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Document Extraction for Litigation</h3>
+                        </div>
+                        <div class="agent-card agent-card-green">
+                            <h3>Knowledge Search</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Partner Quality Assurance Audit</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Regulatory Compliance Audit</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Policy Underwriting Support</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>Fraud Detection Agent</h3>
+                        </div>
+                        <div class="agent-card agent-card-blue">
+                            <h3>AI Customer Support (Chat, Email, Voice)</h3>
+                        </div>
+                        <div class="agent-card agent-card-orange">
+                            <h3>Budget Forecasting Agent</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile CTA Button -->
+                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button use-case-mobile-cta" target="_blank">
+                        Talk to us
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Build For Section -->
+    <section id="who-we-build-for" class="section who-we-build-for-tabs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who We Build For</h2>
+                <p class="section-description">AI agents that fit your business whether you're scaling, automating, or innovating</p>
+            </div>
+            
+            <!-- Industry Tabs -->
+            <div class="industry-tabs">
+                <button class="industry-tab active" data-industry="tech-startups">
+                    <img src="assets/Startups.png" alt="Tech Startups" class="tab-icon-img">
+                    <span class="tab-label">Tech Startups</span>
+                </button>
+                <button class="industry-tab" data-industry="consulting">
+                    <img src="assets/Consulting.png" alt="Consulting & Agencies" class="tab-icon-img">
+                    <span class="tab-label">Consulting & Agencies</span>
+                </button>
+                <button class="industry-tab" data-industry="insurance">
+                    <img src="assets/Insurance.png" alt="Insurance" class="tab-icon-img">
+                    <span class="tab-label">Insurance</span>
+                </button>
+                <button class="industry-tab" data-industry="lending">
+                    <img src="assets/Finance.png" alt="Lending & Finance" class="tab-icon-img">
+                    <span class="tab-label">Lending & Finance</span>
+                </button>
+                <button class="industry-tab" data-industry="healthcare">
+                    <img src="assets/Healthcare.png" alt="Healthcare" class="tab-icon-img">
+                    <span class="tab-label">Healthcare</span>
+                </button>
+                <button class="industry-tab" data-industry="custom">
+                    <img src="assets/Custom_Solutions.png" alt="Custom Solutions" class="tab-icon-img">
+                    <span class="tab-label">Custom Solutions</span>
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="industry-tab-content">
+                <!-- Tech Startups -->
+                <div class="industry-content active" data-industry="tech-startups">
+                    <div class="industry-text">
+                        <h3 class="industry-content-title">Tech Startups</h3>
+                        <p class="industry-content-description">
+                            Accelerate your roadmap, add AI features, MVPs, or autonomous workflows powered by LangChain, Microsoft Autogen, AWS Bedrock, and Google Vertex AI.
+                        </p>
+                        <p class="industry-content-description">
+                            Move from idea to working prototype in weeks with our specialized AI engineering team.
+                        </p>
+                        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                            Learn More
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="industry-visual">
+                        <div class="visual-placeholder">
+                            <img src="assets/Startups.png" alt="Tech Startups" class="industry-visual-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consulting & Agencies -->
+                <div class="industry-content" data-industry="consulting">
+                    <div class="industry-text">
+                        <h3 class="industry-content-title">Consulting Companies & Agencies</h3>
+                        <p class="industry-content-description">
+                            Partner with us to deliver white-label AI solutions to your clients, from concept to production deployments.
+                        </p>
+                        <p class="industry-content-description">
+                            We act as your behind-the-scenes AI delivery team, ensuring your clients get world-class AI solutions.
+                        </p>
+                        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                            Learn More
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="industry-visual">
+                        <div class="visual-placeholder">
+                            <img src="assets/Consulting.png" alt="Consulting & Agencies" class="industry-visual-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance -->
+                <div class="industry-content" data-industry="insurance">
+                    <div class="industry-text">
+                        <h3 class="industry-content-title">Insurance Companies</h3>
+                        <p class="industry-content-description">
+                            Automate claims, underwriting, customer service, and compliance documentation with intelligent AI agents.
+                        </p>
+                        <p class="industry-content-description">
+                            Deploy AI that helps teams process faster, reduce manual errors, and improve decision accuracy.
+                        </p>
+                        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                            Learn More
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="industry-visual">
+                        <div class="visual-placeholder">
+                            <img src="assets/Insurance.png" alt="Insurance" class="industry-visual-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lending & Finance -->
+                <div class="industry-content" data-industry="lending">
+                    <div class="industry-text">
+                        <h3 class="industry-content-title">Lending & Financial Services</h3>
+                        <p class="industry-content-description">
+                            Build intelligent agents that automate credit checks, KYC, customer support, and loan documentation.
+                        </p>
+                        <p class="industry-content-description">
+                            Improve risk analysis and operational efficiency using secure, compliant AI solutions.
+                        </p>
+                        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                            Learn More
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="industry-visual">
+                        <div class="visual-placeholder">
+                            <img src="assets/Finance.png" alt="Lending & Finance" class="industry-visual-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthcare -->
+                <div class="industry-content" data-industry="healthcare">
+                    <div class="industry-text">
+                        <h3 class="industry-content-title">Healthcare & Life Sciences</h3>
+                        <p class="industry-content-description">
+                            Enable patient engagement, automate documentation, and extract insights from clinical records with HIPAA-ready AI agents.
+                        </p>
+                        <p class="industry-content-description">
+                            Enhance operational workflows while maintaining strict data privacy and compliance.
+                        </p>
+                        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                            Learn More
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="industry-visual">
+                        <div class="visual-placeholder">
+                            <img src="assets/Healthcare.png" alt="Healthcare" class="industry-visual-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Solutions -->
+                <div class="industry-content" data-industry="custom">
+                    <div class="industry-text">
+                        <h3 class="industry-content-title">Custom Industry Solutions</h3>
+                        <p class="industry-content-description">
+                            Every business has unique needs. From logistics to retail to manufacturing, we design AI agents tailored to your data, workflows, and systems.
+                        </p>
+                        <p class="industry-content-description">
+                            Delivering measurable ROI and reliability, customized to your specific industry challenges.
+                        </p>
+                        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                            Learn More
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="industry-visual">
+                        <div class="visual-placeholder">
+                            <img src="assets/Custom_Solutions.png" alt="Custom Solutions" class="industry-visual-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile CTA Button -->
+            <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button industry-mobile-cta" target="_blank">
+                Learn More
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">A proven process to deliver AI agents that drive real business outcomes</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Discovery Call</h3>
+                        <p class="step-description">Understand your business and identify AI opportunities that deliver maximum impact.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Design & Scope</h3>
+                        <p class="step-description">Define agent logic, integrations, and metrics to ensure alignment with your goals.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Build & Deploy</h3>
+                        <p class="step-description">Develop, test, and integrate your custom AI agents into your production environment.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Measure & Improve</h3>
+                        <p class="step-description">Track ROI, accuracy, and operational outcomes to continuously optimize performance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button" target="_blank">
+                    Start Your AI Journey
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="trust-section scroll-animate">
+    <!-- Why Neurogent.ai Section -->
+    <section id="why-us" class="section why-us">
         <div class="container">
-            <p class="trust-text">Trusted by fast-growing companies across Healthcare, Finance, Logistics & Insurance</p>
-            <div class="trust-metrics">
-                <div class="trust-metric">
-                    <div class="trust-metric-value">10x</div>
-                    <div class="trust-metric-label">ROI Guaranteed</div>
-                </div>
-                <div class="trust-metric">
-                    <div class="trust-metric-value">90 Days</div>
-                    <div class="trust-metric-label">Time to Value</div>
-                </div>
-                <div class="trust-metric">
-                    <div class="trust-metric-value">$3M+</div>
-                    <div class="trust-metric-label">Value Delivered</div>
-                </div>
-                <div class="trust-metric">
-                    <div class="trust-metric-value">98%</div>
-                    <div class="trust-metric-label">Client Satisfaction</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section id="problem" class="section scroll-animate">
-        <div class="container">
-            <h2 class="section-title">Your Manual Processes Are Bleeding Money</h2>
-            <p class="section-subtitle">Every day you delay automation, competitors gain ground and profits slip away. The cost of inaction is now $50,000+ per month for most businesses.</p>
-            
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>$200K+ Annual Waste</h3>
-                    <p>Manual tasks cost 5-8x more than automation. Your team spends 60% of time on repetitive work instead of growth activities.</p>
-                </div>
-                
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Missed Revenue Opportunities</h3>
-                    <p>Trapped data means 30% slower decision-making and lost deals. Competitors with integrated systems are winning contracts you should have.</p>
-                </div>
-                
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <i class="fas fa-user-times"></i>
-                    </div>
-                    <h3>Customer Defection Risk</h3>
-                    <p>73% of customers switch providers due to poor digital experience. Every delayed response costs potential lifetime value of $50K+ per customer.</p>
-                </div>
-                
-                <div class="problem-item">
-                    <div class="problem-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Growth Ceiling</h3>
-                    <p>Manual scaling costs 10x more than automated growth. You're hitting capacity limits while agile competitors capture market share.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section id="solutions" class="section section-alt scroll-animate">
-        <div class="container">
-            <h2 class="section-title">Stop Losing Money. Start Automating.</h2>
-            <p class="section-subtitle">While competitors struggle with generic solutions, we deliver custom AI that integrates seamlessly and delivers results in 90 days or less.</p>
-            
-            <div class="solution-highlight">
-                <p>We guarantee <strong>10x ROI within 12 months</strong>. Our AI solutions typically pay for themselves in 60-90 days.</p>
-            </div>
-            
-            <div class="solution-pillars">
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>AI-Powered Workflow Automation</h3>
-                </div>
-                
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Conversational AI (Voice & Chat)</h3>
-                </div>
-                
-                <div class="pillar">
-                    <div class="pillar-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3>Intelligent Document & Data Extraction</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us Section -->
-    <section id="why-us" class="section scroll-animate">
-        <div class="container">
-            <h2 class="section-title">Why Companies Choose neurogent.ai</h2>
-            
-            <div class="differentiators">
-                <div class="diff-item">
-                    <div class="diff-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>ROI-Guaranteed Results</h3>
-                    <p>We're so confident in our results, we guarantee 10x ROI within 12 months. 98% of clients see positive ROI within 90 days.</p>
-                </div>
-                
-                <div class="diff-item">
-                    <div class="diff-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3>Turnkey Implementation</h3>
-                    <p>No technical headaches. We handle everything—development, security, deployment, training. You focus on results while we deliver a complete solution.</p>
-                </div>
-                
-                <div class="diff-item">
-                    <div class="diff-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Battle-Tested Technology</h3>
-                    <p>Used by Fortune 500 companies processing millions of transactions. Our solutions scale from startup to enterprise without breaking.</p>
-                </div>
-                
-                <div class="diff-item">
-                    <div class="diff-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>90-Day Time to Value</h3>
-                    <p>While others take 6-18 months, we deliver working solutions in 90 days. See immediate results, not endless consulting cycles.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Capabilities Section -->
-    <section id="capabilities" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">What We Build</h2>
-            
-            <div class="capabilities-grid">
-                <div class="capability-section">
-                    <h3><i class="fas fa-brain"></i> Generative AI & RAG Solutions</h3>
-                    <ul>
-                        <li>Custom Chatbots & Q&A Systems</li>
-                        <li>Grounded, Citation-Based Answer Engines</li>
-                        <li>Knowledge Base Search & Synthesis</li>
+            <div class="why-us-content">
+                <div class="why-us-text">
+                    <h2 class="section-title">Why neurogent.ai</h2>
+                    <ul class="why-us-list">
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="#8B5CF6" stroke-width="2"/>
+                                <path d="M8 12L11 15L16 9" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Deep expertise across LangChain, Microsoft Autogen, CrewAI, AWS Bedrock, Google Vertex AI, and more</span>
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="#8B5CF6" stroke-width="2"/>
+                                <path d="M8 12L11 15L16 9" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Proven success building production-grade agents for enterprise environments</span>
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="#8B5CF6" stroke-width="2"/>
+                                <path d="M8 12L11 15L16 9" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>End-to-end delivery, from concept to secure deployment</span>
+                        </li>
+                        <li>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="#8B5CF6" stroke-width="2"/>
+                                <path d="M8 12L11 15L16 9" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Transparent, collaborative, and outcome-driven approach</span>
+                        </li>
                     </ul>
                 </div>
-                
-                <div class="capability-section">
-                    <h3><i class="fas fa-cogs"></i> AI-Powered Workflow Automation</h3>
-                    <ul>
-                        <li>Business Process Automation (BPA)</li>
-                        <li>Robotic Process Automation (RPA) & Browser Automation</li>
-                        <li>Real-time Analytics & Reporting Dashboards</li>
-                    </ul>
-                </div>
-                
-                <div class="capability-section">
-                    <h3><i class="fas fa-microphone"></i> Conversational AI (Voice & Chat)</h3>
-                    <ul>
-                        <li>Outbound & Inbound Voice AI Agents</li>
-                        <li>Real-time, Low-Latency Voice Interaction</li>
-                        <li>CRM & Systems of Record Integration</li>
-                    </ul>
-                </div>
-                
-                <div class="capability-section">
-                    <h3><i class="fas fa-file-invoice"></i> Intelligent Data Extraction</h3>
-                    <ul>
-                        <li>Data Normalization from Unstructured Sources (PDFs, Web)</li>
-                        <li>Automated Data Entry & Validation</li>
-                        <li>Integration with Downstream Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Preview -->
-    <section id="case-studies" class="section scroll-animate">
-        <div class="container text-center">
-            <h2 class="section-title">Trusted by Fast-Growing Companies</h2>
-            <p class="section-subtitle large">Real results from real businesses who chose to automate before their competitors.</p>
-            
-            <div class="case-study-preview">
-                <div class="preview-grid">
-                    <div class="preview-item">
-                        <i class="fas fa-hospital"></i>
-                        <span>Healthcare Claims Automation</span>
-                        <small>Dubai based Hospitals</small>
+                <div class="why-us-visual">
+                    <div class="tech-badge">
+                        <img src="assets/langchain.png" alt="LangChain" class="tech-icon-img">
+                        <span>LangChain</span>
                     </div>
-                    <div class="preview-item">
-                        <i class="fas fa-university"></i>
-                        <span>AI-Powered Loan Advisor</span>
-                        <small>Mumbai based NBFC</small>
+                    <div class="tech-badge">
+                        <img src="assets/Autogen.png" alt="Microsoft Autogen" class="tech-icon-img">
+                        <span>Microsoft Autogen</span>
                     </div>
-                    <div class="preview-item">
-                        <i class="fas fa-truck"></i>
-                        <span>Voice AI Driver Onboarding</span>
-                        <small>Gurugram based Logistics Company</small>
+                    <div class="tech-badge">
+                        <img src="assets/crewai.png" alt="CrewAI" class="tech-icon-img">
+                        <span>CrewAI</span>
                     </div>
-                    <div class="preview-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Insurance Eligibility Automation</span>
-                        <small>Dubai based Hospitals</small>
+                    <div class="tech-badge">
+                        <img src="assets/AWS Bedrock.png" alt="AWS Bedrock" class="tech-icon-img">
+                        <span>AWS Bedrock</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/vertex.png" alt="Google Vertex AI" class="tech-icon-img">
+                        <span>Google Vertex AI</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/chatgpt.png" alt="GPT-5" class="tech-icon-img">
+                        <span>GPT-5</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/Claude.png" alt="Claude" class="tech-icon-img">
+                        <span>Claude</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/llama.png" alt="Llama" class="tech-icon-img">
+                        <span>Llama</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/vector.png" alt="Vector Database" class="tech-icon-img">
+                        <span>Vector Database</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/RAG.png" alt="RAG" class="tech-icon-img">
+                        <span>RAG</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/knowledge_graph.png" alt="Knowledge Graphs" class="tech-icon-img">
+                        <span>Knowledge Graphs</span>
+                    </div>
+                    <div class="tech-badge">
+                        <img src="assets/n8n.png" alt="n8n" class="tech-icon-img">
+                        <span>n8n</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Study Details -->
-    <section class="section section-alt">
+    <!-- Contact Section -->
+    <section class="section contact">
         <div class="container">
-            <div class="case-studies-detailed">
-                <!-- Healthcare Case Study -->
-                <div class="case-study-card">
-                    <h3 class="case-study-title">From $800K Annual Losses to 15% Revenue Growth</h3>
-                    <div class="case-study-layout">
-                        <div class="case-study-main">
-                            <div class="challenge">
-                                <h4><i class="fas fa-exclamation-triangle"></i> The Challenge</h4>
-                                <p>A 500-bed hospital was losing $800K annually due to denied claims, manual processing delays, and staff burnout. Claims took 45 days to process with 20% denial rates.</p>
-                            </div>
-                            
-                            <div class="solution">
-                                <h4><i class="fas fa-lightbulb"></i> Our Solution</h4>
-                                <p>We deployed an AI-powered claims engine that processes submissions 24/7, predicts denials before submission, and automatically resubmits with corrections. Implementation took 60 days.</p>
-                            </div>
-                            
-                            <div class="features">
-                                <h4><i class="fas fa-cog"></i> Core Features</h4>
-                                <ul>
-                                    <li>Complete Claims Lifecycle Automation</li>
-                                    <li>Real-time Revenue & Denial Dashboards</li>
-                                    <li>Automated Workflow Engine</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="case-study-impact">
-                            <h4><i class="fas fa-chart-line"></i> The Impact</h4>
-                            <div class="impact-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">$1.2M</div>
-                                    <div class="metric-label">Additional Annual Revenue</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">45 → 6 Days</div>
-                                    <div class="metric-label">Processing Time</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">$800K</div>
-                                    <div class="metric-label">Annual Cost Savings</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">20% → 8%</div>
-                                    <div class="metric-label">Denial Rate</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Finance Case Study -->
-                <div class="case-study-card">
-                    <h3 class="case-study-title">300% Lead Conversion Increase in 45 Days</h3>
-                    <div class="case-study-layout">
-                        <div class="case-study-main">
-                            <div class="challenge">
-                                <h4><i class="fas fa-exclamation-triangle"></i> The Challenge</h4>
-                                <p>A regional bank was losing qualified leads due to 3-5 minute response times for loan queries. Customer support costs were $180K annually with only 12% lead conversion.</p>
-                            </div>
-                            
-                            <div class="solution">
-                                <h4><i class="fas fa-lightbulb"></i> Our Solution</h4>
-                                <p>We created an AI advisor that answers complex loan questions instantly, calculates eligibility in real-time, and captures high-intent leads automatically. Deployed in 45 days.</p>
-                            </div>
-                            
-                            <div class="features">
-                                <h4><i class="fas fa-cog"></i> Core Features</h4>
-                                <ul>
-                                    <li>RAG Pipeline for Grounded, Cited Answers</li>
-                                    <li>Integrated EMI & Affordability Calculators</li>
-                                    <li>Automated Lead Capture & Handoff</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="case-study-impact">
-                            <h4><i class="fas fa-bullseye"></i> The Impact</h4>
-                            <div class="impact-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">300%</div>
-                                    <div class="metric-label">Lead Conversion Increase</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">3-5min → 5sec</div>
-                                    <div class="metric-label">Response Time</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">$970K</div>
-                                    <div class="metric-label">Additional Loan Volume</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Logistics Case Study -->
-                <div class="case-study-card">
-                    <h3 class="case-study-title">$200K Cost Savings: 100K Drivers in 90 Days</h3>
-                    <div class="case-study-layout">
-                        <div class="case-study-main">
-                            <div class="challenge">
-                                <h4><i class="fas fa-exclamation-triangle"></i> The Challenge</h4>
-                                <p>A logistics giant needed to launch their marketplace in 60 days, requiring onboarding of 100,000 drivers. It was impossible to set up a call center team in 60 days to call all drivers, and salary costs were prohibitively high for such a large operation.</p>
-                            </div>
-                            
-                            <div class="solution">
-                                <h4><i class="fas fa-lightbulb"></i> Our Solution</h4>
-                                <p>We delivered everything in one month that would have taken more than one year without our solution. Our Voice AI agent conducts 20,000+ calls daily in vernacular languages, verifies documents in real-time, and completes onboarding in 2 days vs 3 weeks.</p>
-                            </div>
-                            
-                            <div class="features">
-                                <h4><i class="fas fa-cog"></i> Core Features</h4>
-                                <ul>
-                                    <li>Low-Latency, Multilingual Conversational AI</li>
-                                    <li>Automated Slot-Filling & Data Confirmation</li>
-                                    <li>Compliance-First Design (Consent & Audit Trails)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="case-study-impact">
-                            <h4><i class="fas fa-rocket"></i> The Impact</h4>
-                            <div class="impact-metrics">
-                                <div class="metric">
-                                    <div class="metric-value">$200K</div>
-                                    <div class="metric-label">Setup Cost Savings</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">70%</div>
-                                    <div class="metric-label">Cost Reduction vs Manual</div>
-                                </div>
-                                <div class="metric">
-                                    <div class="metric-value">1 Month</div>
-                                    <div class="metric-label">vs 1+ Year Manual Setup</div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="contact-card">
+                <div class="contact-content">
+                    <h2 class="contact-title">Ready to explore what AI agents can do for your business?</h2>
+                    <p class="contact-description">Book a free consultation call and discover how custom AI agents can transform your operations.</p>
+                    <div class="contact-cta">
+                        <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" class="primary-button large" target="_blank">
+                            Book a Free AI Consultation
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@neurogent.ai" class="email-link">
+                            📩 hello@neurogent.ai
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Impact Metrics -->
-    <section id="impact" class="section">
-        <div class="container">
-            <h2 class="section-title">We Deliver Tangible Business Results</h2>
-            <p class="section-subtitle">Across industries, our solutions drive efficiency, growth, and profitability.</p>
-            
-            <div class="impact-table">
-                <div class="table-row header">
-                    <div class="table-cell">Metric</div>
-                    <div class="table-cell">Improvement</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Additional Revenue Generated</div>
-                    <div class="table-cell highlight">$2.1M - $3.2M Annual</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Speed Improvement</div>
-                    <div class="table-cell highlight">10x - 50x Faster</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Cost Savings</div>
-                    <div class="table-cell highlight">$800K - $3.2M Annual</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Implementation Time</div>
-                    <div class="table-cell highlight">30-90 Days</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">ROI Achievement</div>
-                    <div class="table-cell highlight">10x+ Within 12 Months</div>
-                </div>
-                <div class="table-row">
-                    <div class="table-cell">Error Reduction</div>
-                    <div class="table-cell highlight">80-90% Fewer Errors</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Stack -->
-    <section id="technology" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Cutting-Edge AI Technology Stack</h2>
-            <p class="section-subtitle">We leverage the latest AI technologies and enterprise-grade infrastructure to deliver scalable, intelligent solutions that drive real business impact.</p>
-            
-            <div class="tech-stack">
-                <div class="tech-table-row">
-                    <div class="tech-category-label">
-                        <i class="fas fa-brain"></i>
-                        <span>GenAI</span>
-                    </div>
-                    <div class="tech-items-row">
-                        <div class="tech-item">
-                            <i class="fas fa-link"></i>
-                            <span>LangChain</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>LangGraph</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-search"></i>
-                            <span>RAG</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-cube"></i>
-                            <span>Pinecone</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-cube"></i>
-                            <span>Weaviate</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-cube"></i>
-                            <span>Qdrant</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-vector-square"></i>
-                            <span>Embeddings</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>LangSmith</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-table-row">
-                    <div class="tech-category-label">
-                        <i class="fas fa-robot"></i>
-                        <span>LLMs & Voice</span>
-                    </div>
-                    <div class="tech-items-row">
-                        <div class="tech-item">
-                            <i class="fas fa-brain"></i>
-                            <span>OpenAI</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-robot"></i>
-                            <span>Anthropic</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-google"></i>
-                            <span>Gemini</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-dragon"></i>
-                            <span>Llama</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-microphone"></i>
-                            <span>LiveKit</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-volume-up"></i>
-                            <span>ElevenLabs</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-microphone-alt"></i>
-                            <span>Whisper</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-broadcast-tower"></i>
-                            <span>WebRTC</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-table-row">
-                    <div class="tech-category-label">
-                        <i class="fas fa-cloud"></i>
-                        <span>Deployment</span>
-                    </div>
-                    <div class="tech-items-row">
-                        <div class="tech-item">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-google"></i>
-                            <span>GCP</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Azure</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-ship"></i>
-                            <span>Kubernetes</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Actions</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-table-row">
-                    <div class="tech-category-label">
-                        <i class="fas fa-database"></i>
-                        <span>Database</span>
-                    </div>
-                    <div class="tech-items-row">
-                        <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-memory"></i>
-                            <span>Redis</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-leaf"></i>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-search"></i>
-                            <span>Elasticsearch</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-stream"></i>
-                            <span>Kafka</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="section">
-        <div class="container">
-            <h2 class="section-title">Get Results in 90 Days, Not 9 Months</h2>
-            <p class="section-subtitle">While others promise eventual results, we deliver working solutions fast with guaranteed ROI.</p>
-            
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Discovery & Strategy (Week 1-2)</h3>
-                        <ul>
-                            <li>Identify $100K+ automation opportunities and define guaranteed ROI metrics</li>
-                            <li>Design custom solution architecture for immediate impact</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Prototype & Build (Week 3-10)</h3>
-                        <ul>
-                            <li>Weekly demos showing real progress and battle-tested AI components integration</li>
-                            <li>Continuous testing with your actual data and workflows</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Deploy & Scale (Week 11-12)</h3>
-                        <ul>
-                            <li>Zero-downtime deployment with full security compliance</li>
-                            <li>Complete team training and 24/7 support setup</li>
-                            <li>Performance monitoring with guaranteed SLA commitments</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <!-- Company Info -->
-                <div class="footer-column footer-about">
+                <div class="footer-column">
                     <div class="footer-logo">
-                        <img src="logo.avif" alt="neurogent.ai Logo" class="footer-logo-image">
-                        <span>neurogent.ai</span>
+                        <img src="logo.png" alt="Neurogent.ai Logo" class="logo-image">
+                        <span class="logo-text">Neurogent.ai</span>
                     </div>
-                    <!-- <p class="footer-description">Transform your business with custom AI solutions that deliver 10x ROI in 90 days.</p> -->
-                    <div class="footer-company-details">
-                        <p><strong>Neurogent Intelligence LLP</strong></p>
-                        <p>303, Maa Bhagwati, RK Enclave,<br>Laxman Vihar, Sector 5,<br>Gurgaon, 122001</p>
-                        <p class="footer-incorporation">CIN: ACP-6309</p>
-                    </div>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/company/neurogent.ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        
-                    </div>
+                    <p class="footer-tagline">Building the future with production-grade AI agents</p>
                 </div>
-
-                <!-- Main CTA -->
-                <div class="footer-cta">
-                    <h3 class="footer-cta-title">Ready to Transform Your Business?</h3>
-                    <p class="footer-cta-subtitle">Join leading companies achieving 10x ROI with custom AI solutions</p>
-                    <a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" target="_blank" class="nav-link cta-nav">
-                        Book a Demo
-                    </a>
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:hello@neurogent.ai">hello@neurogent.ai</a>
-                        </div>
-                    </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#what-we-do">What We Do</a></li>
+                        <li><a href="#use-cases">Use Cases</a></li>
+                        <li><a href="#who-we-build-for">Industries</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@neurogent.ai">hello@neurogent.ai</a></li>
+                        <li><a href="https://calendar.app.google/LLxhMUzRgQjrriQQ6" target="_blank">Book a Call</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <p class="footer-legal">
+                        <strong>Neurogent Intelligence LLP</strong><br>
+                        303, Maa Bhagwati, RK Enclave<br>
+                        Laxman Vihar, Sector 5<br>
+                        Gurgaon, 122001<br>
+                        CIN: ACP-6309
+                    </p>
                 </div>
             </div>
-
-            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p class="footer-copyright">&copy; <span id="current-year"></span> Neurogent Intelligence LLP. All rights reserved.</p>
-                    <!-- <div class="footer-legal">
-                        <a href="#privacy">Privacy Policy</a>
-                        <span class="footer-divider">|</span>
-                        <a href="#terms">Terms of Service</a>
-                        <span class="footer-divider">|</span>
-                        <a href="#cookies">Cookie Policy</a>
-                    </div> -->
-                </div>
+                <p>&copy; 2025 Neurogent Intelligence LLP. All rights reserved.</p>
             </div>
         </div>
     </footer>
