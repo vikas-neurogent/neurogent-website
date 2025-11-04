@@ -129,6 +129,16 @@ body {
     object-fit: contain;
 }
 
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-primary);
+}
+
 .logo-text {
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -155,30 +165,44 @@ body {
 }
 
 .nav-link-text {
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
+    padding: 10px 24px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+    border: 1.5px solid rgba(139, 92, 246, 0.3);
+    color: var(--primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-link-text:hover {
-    background: rgba(139, 92, 246, 0.1);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    border-color: rgba(139, 92, 246, 0.5);
+    color: var(--primary-dark);
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
 }
 
 /* Mobile Menu Link */
 .mobile-menu-link {
     display: block;
-    padding: 12px 16px;
-    color: var(--text-primary);
+    padding: 14px 20px;
+    color: var(--primary);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
-    border-radius: 8px;
-    transition: all 0.2s ease;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+    border: 1.5px solid rgba(139, 92, 246, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .mobile-menu-link:hover {
-    background: rgba(139, 92, 246, 0.1);
-    color: var(--primary);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    border-color: rgba(139, 92, 246, 0.5);
+    color: var(--primary-dark);
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
 }
 
 /* Theme Toggle Button */
@@ -2212,7 +2236,7 @@ body {
 /* ==================== MVP Section Styles ==================== */
 
 .mvp-section {
-    padding: 120px 0;
+    padding: 100px 0 60px;
     background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
     position: relative;
     overflow: hidden;
@@ -2234,7 +2258,7 @@ body {
 .mvp-hero {
     text-align: center;
     max-width: 900px;
-    margin: 0 auto 80px;
+    margin: 0 auto 40px;
     position: relative;
     z-index: 1;
 }
@@ -2242,16 +2266,20 @@ body {
 .mvp-badge {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    padding: 8px 20px;
+    padding: 8px 16px;
     background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
     border: 1px solid rgba(139, 92, 246, 0.2);
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--primary);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     animation: fadeInUp 0.6s ease-out;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.4;
 }
 
 .mvp-badge-dot {
@@ -2268,19 +2296,19 @@ body {
 }
 
 .mvp-title {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 800;
     line-height: 1.2;
     color: var(--text-primary);
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     animation: fadeInUp 0.6s ease-out 0.1s backwards;
 }
 
 .mvp-subtitle {
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     animation: fadeInUp 0.6s ease-out 0.2s backwards;
 }
 
@@ -2288,9 +2316,9 @@ body {
 .mvp-price-highlight {
     background: var(--card-bg);
     border: 2px solid var(--border-color);
-    border-radius: 24px;
-    padding: 48px;
-    margin-bottom: 40px;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 24px;
     box-shadow: var(--shadow-xl);
     position: relative;
     overflow: hidden;
@@ -2312,17 +2340,17 @@ body {
     align-items: baseline;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .price-currency {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--text-secondary);
 }
 
 .price-amount {
-    font-size: 72px;
+    font-size: 60px;
     font-weight: 900;
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -2332,7 +2360,7 @@ body {
 }
 
 .price-period {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text-secondary);
     font-weight: 500;
 }
@@ -2340,7 +2368,7 @@ body {
 .mvp-price-details {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    gap: 24px;
     flex-wrap: wrap;
 }
 
@@ -2519,7 +2547,7 @@ body {
 
 .mvp-why-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
@@ -2794,10 +2822,6 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .mvp-why-grid {
-        grid-template-columns: 1fr;
-    }
-
     .mvp-cta-card {
         flex-direction: column;
         text-align: center;
@@ -2816,6 +2840,12 @@ body {
 
     .mvp-subtitle {
         font-size: 16px;
+    }
+
+    .mvp-badge {
+        font-size: 12px;
+        padding: 8px 14px;
+        max-width: 85%;
     }
 
     .mvp-price-highlight {
@@ -2863,6 +2893,10 @@ body {
 
     .mvp-feature-card {
         padding: 24px;
+    }
+
+    .mvp-why-grid {
+        grid-template-columns: 1fr;
     }
 
     .mvp-why-item {
@@ -2931,8 +2965,15 @@ body {
     }
 
     .mvp-badge {
-        font-size: 12px;
-        padding: 6px 16px;
+        font-size: 11px;
+        padding: 8px 12px;
+        max-width: 90%;
+        gap: 6px;
+    }
+    
+    .mvp-badge-dot {
+        width: 6px;
+        height: 6px;
     }
 }
 
