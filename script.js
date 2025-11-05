@@ -1,5 +1,5 @@
 // Rotating Text Animation
-const technologies = ['LangChain', 'Microsoft Autogen', 'AWS Bedrock', 'Google Vertex AI', 'CrewAI'];
+const technologies = ['LangGraph', 'LangChain', 'CrewAI', 'Microsoft Autogen', 'MS Semantic Kernel', 'AWS Bedrock', 'Google Vertex AI', 'Azure AI Studio'];
 let currentTechIndex = 0;
 const rotatingTextElement = document.querySelector('.rotating-text');
 

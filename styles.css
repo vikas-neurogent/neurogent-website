@@ -183,6 +183,14 @@ body {
     box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
 }
 
+.nav-text-full {
+    display: inline;
+}
+
+.nav-text-mobile {
+    display: none;
+}
+
 /* Mobile Menu Link */
 .mobile-menu-link {
     display: block;
@@ -1729,6 +1737,14 @@ body {
     /* Navbar adjustments for mobile */
     .nav-content {
         padding: 12px 0;
+    }
+    
+    .nav-text-full {
+        display: none;
+    }
+    
+    .nav-text-mobile {
+        display: inline;
     }
     
     .logo {
